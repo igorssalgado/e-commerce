@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<!-- Esse documento HTML será usado para aplicar o CSS exemplo (basico_css3.css). Dessa forma, ele está comentado apenas nas partes que dizem respeito ao CSS.
+
+Se você não está familiarizado com HTML5, talvez seja interessante que você veja o seguinte documento antes: https://github.com/thiagobottoni/Exemplos/blob/master/HTML5/B%C3%A1sico%20de%20HTML5.html -->
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <img class="logo" src="./Jitterbit-logo-color-horizontal.png" alt="jitterbit-logo" sizes="100px">
+</head>
+
+<body>
+    <form action="/subscribe" method="post">
+        <div>
+            <ul>
+                <!-- Client Informations -->
+                <legend>Client Informations</legend>
+                <li>
+                    <label>Nome Completo</label>
+                    <input type="text" name="nome_completo" required>
+                </li>
+                <li>
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="email@email.com" required>
+                </li>
+                <li>
+                    <label>Telefone</label>
+                    <input type="tel" name="telefone" placeholder="123456789" required>
+                </li>
+
+                <!-- Shipping information  -->
+                <legend>Shipping information</legend>
+                <li>
+                    <label>Endereco</label>
+                    <input type="text" name="endereco" placeholder="endereco">
+                </li>
+                <li>
+                    <label>Complemento</label>
+                    <input type="text" name="complemento" placeholder="Complemento">
+                </li>
+                <li>
+                    <label>Bairro</label>
+                    <input type="text" name="bairro" placeholder="bairro">
+                </li>
+                <li>
+                    <label>Cidade</label>
+                    <input type="text" name="cidade" placeholder="cidade">
+                </li>
+                <li>
+                    <label>Estado</label>
+                    <input type="text" name="estado" placeholder="estado">
+                </li>
+                <li>
+                    <label>CEP</label>
+                    <input type="text" name="cep" placeholder="CEP">
+                </li>
+
+                <!-- Order detais -->
+                <legend>Order detais</legend>
+                <li>
+                    <label>Id Produto</label>
+                    <input type="text" name="id_produto" placeholder="Id Produto">
+                </li>
+                <li>
+                    <label>Quantidade</label>
+                    <input type="text" name="quantidade" placeholder="Quantidade">
+                </li>
+
+
+                <!-- Método de Pagamento -->
+                <legend>Método de Pagamento</legend>
+                <li>
+                    <input type="radio" id="credito" name="payment" value="Credito">
+                    <label for="credito">Credito</label><br>
+                </li>
+                <li>
+                    <input type="radio" id="boleto" name="payment" value="Boleto">
+                    <label for="boleto">Ticket</label><br>
+                </li>
+                <li>
+                    <input type="radio" id="paypal" name="payment" value="PayPal">
+                    <label for="paypal">PayPal</label>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Botoes de Acao -->
+        <div>
+            <button>Enviar Pedido</button>
+            <button>Limpar Formulário</button>
+        </div>
+    </form>
+
+
+</body>
+
+</html>
