@@ -38,7 +38,7 @@ Se você não está familiarizado com HTML5, talvez seja interessante que você 
                     <fieldset>
                         <li>
                             <label>Endereco</label>
-                            <input type="text" name="endereco" placeholder="endereco">
+                            <input type="text" name="endereco" placeholder="endereco" required>
                         </li>
                         <li>
                             <label>Complemento</label>
@@ -46,19 +46,48 @@ Se você não está familiarizado com HTML5, talvez seja interessante que você 
                         </li>
                         <li>
                             <label>Bairro</label>
-                            <input type="text" name="bairro" placeholder="bairro">
+                            <input type="text" name="bairro" placeholder="bairro" required>
                         </li>
                         <li>
                             <label>Cidade</label>
-                            <input type="text" name="cidade" placeholder="cidade">
+                            <input type="text" name="cidade" placeholder="cidade" required>
                         </li>
                         <li>
                             <label>Estado</label>
-                            <input type="text" name="estado" placeholder="estado">
+                            <select name="estado" id="estado" required>
+                                <option value="" selected disabled hidden>Escolha</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
                         </li>
                         <li>
                             <label>CEP</label>
-                            <input type="text" name="cep" placeholder="CEP">
+                            <input type="text" name="cep" placeholder="CEP" required>
                         </li>
                     </fieldset>
                     <!-- Informações do Pedido -->
@@ -66,11 +95,18 @@ Se você não está familiarizado com HTML5, talvez seja interessante que você 
                     <fieldset>
                         <li>
                             <label>Id Produto</label>
-                            <input type="text" name="id_produto" placeholder="Id Produto">
+                            <select name="id_produto" id="id_produto" required>
+                                <option value="" selected disabled hidden>Escolha</option>
+                                <option value="AC">v10089015vdb-01</option>
+                                <option value="AL">v10089016vdb-01</option>
+                                <option value="AP">v10089017vdb-01</option>
+                                <option value="AM">v10089018vdb-01</option>
+                                <option value="AP">v10089019vdb-01</option>
+                            </select>
                         </li>
                         <li>
                             <label>Quantidade</label>
-                            <input type="text" name="quantidade" placeholder="Quantidade">
+                            <input type="number" name="quantidade" placeholder="Quantidade" required>
                         </li>
                     </fieldset>
 
@@ -78,7 +114,7 @@ Se você não está familiarizado com HTML5, talvez seja interessante que você 
                     <legend>Método de Pagamento</legend>
                     <fieldset>
                         <li>
-                            <input type="radio" id="credito" name="payment" value="Credito">
+                            <input type="radio" id="credito" name="payment" value="Credito" checked>
                             <label for="credito">Credito</label><br>
                         </li>
                         <li>
