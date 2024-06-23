@@ -46,7 +46,7 @@ legend {
     color: rgb(0, 0, 0);
     font-style: italic;
 	position: absolute;
-    left: 2.5rem;
+	padding-left: 1rem;
     font-size: 20px;
 }
 
