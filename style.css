@@ -1,8 +1,201 @@
-img {
-    max-width: 100%;
-    max-height: 100%;
+/* resize jitterbit page logo */
+.logo-app-image {
+	max-width: 10rem;
 }
 
-.container {
-	display:block;
+/* remove padding of form's ul */
+ul {
+	padding: 0;
+}
+
+/* remove bullets on li */
+li {
+	margin-bottom: 5px;
+	list-style-type: none;
+}
+
+
+/* style the inputs inside the form, to fit the whole page */
+.form-input {
+	width: 100%;
+	padding: .75rem;
+	margin: .01rem;
+	box-sizing: border-box;
+	height: 1rem;
+	margin-bottom: 1rem;
+}
+
+select {
+	width: 100%;
+	margin: .01rem;
+	box-sizing: border-box;
+	height: 1.75rem;
+	margin-bottom: 1rem;
+}
+
+/* change input background color when it is focused */
+input:focus {
+	background-color: rgba(193, 231, 243, 0.589);
+}
+
+/* works with the responsive containers */
+* {
+	box-sizing: border-box;
+}
+
+fieldset {
+	margin-top: .920rem;
+	border: 1px solid rgb(235, 214, 242);
+	background-color: rgb(235, 214, 242, 0.480);
+	padding: 1.2rem;
+	border-radius: 8px;
+	min-height: 15.2rem;
+}
+
+legend {
+    color: rgb(0, 0, 0);
+    font-style: italic;
+	position: absolute;
+	padding-left: 1rem;
+    font-size: 20px;
+}
+
+/* works with the responsive flex containers */
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	font-size: 15px;
+	text-align: left;
+	padding-top: .1rem;
+}
+
+/* works with the responsive flex containers */
+.flex-item-left {
+	padding-right: 1rem;
+	padding-left: 1rem;
+	flex: 50%;
+	
+}
+
+/* works with the responsive flex containers */
+.flex-item-right {
+	padding-right: 1rem;
+	padding-left: 1rem;
+	flex: 50%;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+	.flex-container {
+		flex-direction: column;
+	}
+}
+
+/* page default font: Poppins */
+body {
+	font-family: Poppins;
+}
+
+/* style footer elements */
+.footer-element {
+	display: flex;
+	align-items: center;
+	column-gap: 1.25rem;
+}
+
+/* submit and clear buttons layout */
+.action-buttons {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+}
+
+.submit-btn {
+	background-color: #e0759e;
+	border-radius: 5px;
+	border-style: none;
+	box-sizing: border-box;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 500;
+	height: 40px;
+	line-height: 20px;
+	list-style: none;
+	margin: 0;
+	outline: none;
+	padding: 10px 16px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	transition: color 100ms;
+	vertical-align: baseline;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+	background-color: #F082AC;
+}
+
+.clear-btn:hover,
+.clear-btn:focus {
+	background-color:#e48163;
+}
+
+.clear-btn {
+	background-color: #f77c57;
+	border-radius: 5px;
+	border-style: none;
+	box-sizing: border-box;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 500;
+	height: 40px;
+	line-height: 20px;
+	list-style: none;
+	margin: 0;
+	outline: none;
+	padding: 10px 16px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	transition: color 100ms;
+	vertical-align: baseline;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+}
+
+.clear-btn:hover {
+	opacity: 1
+}
+
+/* style footer text, images and size */
+footer {
+	font-size: .75rem;
+	line-height: 1.16667;
+	display: flex;
+	justify-content: space-around;
+	background-color: rgba(24, 25, 34);
+	color: #ffffff;
+	padding: 1.2rem;
+	padding-bottom: 100%;
+	width: 100%;
+}
+
+/* resize footer logos */
+.logo-img {
+	width: 1.5rem;
+}
+
+/* hide footer logo span for accessibility */
+.logo-span {
+	display: none;
 }
