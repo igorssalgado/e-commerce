@@ -1,34 +1,42 @@
+#page-container {
+	position: relative;
+	min-height: 100vh;
+}
+
 img {
-    max-width: 100%;
+	max-width: 10rem;
 }
 
-.logo-img{
-  width: 1.5rem;
+.logo-img {
+	width: 1.5rem;
 }
 
-.logo-span{
+.logo-span {
 	display: none;
 }
 
 .footer {
 	display: flex;
-    align-items: center;
-    column-gap: 1.25rem;
+	align-items: center;
+	column-gap: 1.25rem;
 }
 
 body {
 	font-family: Poppins;
+	background-image: linear-gradient(rgb(235, 213, 242), rgb(255, 255, 255));
 }
 
 footer {
-	font-weight: 400;
-    font-size: .75rem;
-    line-height: 1.16667;
+	font-size: .75rem;
+	line-height: 1.16667;
 	display: flex;
 	justify-content: space-around;
-  	background-color: rgba(24, 25, 34);
+	background-color: rgba(24, 25, 34);
 	color: #ffffff;
-	padding:  1.2rem;
+	padding: 1.2rem;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 
 p {
@@ -43,4 +51,64 @@ ul {
 
 li {
 	margin-bottom: 5px;
+	list-style-type: none;
+}
+
+form {
+	padding-bottom: 8rem;
+}
+
+.form-input {
+	width: 100%;
+	padding: .75rem;
+	margin: .01rem;
+	box-sizing: border-box;
+	height: 1rem;
+}
+
+
+input:focus {
+	background-color: rgba(193, 231, 243, 0.589);
+}
+
+.input-container {
+	display: flex;
+
+}
+
+.action-button {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 1rem;
+}
+
+/* ------------------- */
+* {
+	box-sizing: border-box;
+
+
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	font-size: 15px;
+	text-align: center;
+}
+
+.flex-item-left {
+	padding: 10px;
+	flex: 50%;
+}
+
+.flex-item-right {
+	padding: 10px;
+	flex: 50%;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+	.flex-container {
+		flex-direction: column;
+	}
 }
