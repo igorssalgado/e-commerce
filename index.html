@@ -15,85 +15,121 @@ Se você não está familiarizado com HTML5, talvez seja interessante que você 
 <body>
     <form action="/subscribe" method="post">
         <div>
-            <ul>
-                <!-- Client Informations -->
-                <legend>Client Informations</legend>
-                <li>
-                    <label>Nome Completo</label>
-                    <input type="text" name="nome_completo" required>
-                </li>
-                <li>
-                    <label>Email</label>
-                    <input type="email" name="email" placeholder="email@email.com" required>
-                </li>
-                <li>
-                    <label>Telefone</label>
-                    <input type="tel" name="telefone" placeholder="123456789" required>
-                </li>
+            <div>
+                <ul class="no-bullets">
+                    <!-- Informações do Cliente -->
+                    <legend>Informações do Cliente</legend>
+                    <fieldset>
+                        <li>
+                            <label>Nome Completo</label>
+                            <input type="text" name="nome_completo" placeholder="nome completo" required>
+                        </li>
+                        <li>
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="email@email.com" required>
+                        </li>
+                        <li>
+                            <label>Telefone</label>
+                            <input type="tel" name="telefone" placeholder="123456789" required>
+                        </li>
+                    </fieldset>
+                    <!-- Endereço de Entrega  -->
+                    <legend>Endereço de Entrega</legend>
+                    <fieldset>
+                        <li>
+                            <label>Endereco</label>
+                            <input type="text" name="endereco" placeholder="endereco">
+                        </li>
+                        <li>
+                            <label>Complemento</label>
+                            <input type="text" name="complemento" placeholder="complemento">
+                        </li>
+                        <li>
+                            <label>Bairro</label>
+                            <input type="text" name="bairro" placeholder="bairro">
+                        </li>
+                        <li>
+                            <label>Cidade</label>
+                            <input type="text" name="cidade" placeholder="cidade">
+                        </li>
+                        <li>
+                            <label>Estado</label>
+                            <input type="text" name="estado" placeholder="estado">
+                        </li>
+                        <li>
+                            <label>CEP</label>
+                            <input type="text" name="cep" placeholder="CEP">
+                        </li>
+                    </fieldset>
+                    <!-- Informações do Pedido -->
+                    <legend>Informações do Pedido</legend>
+                    <fieldset>
+                        <li>
+                            <label>Id Produto</label>
+                            <input type="text" name="id_produto" placeholder="Id Produto">
+                        </li>
+                        <li>
+                            <label>Quantidade</label>
+                            <input type="text" name="quantidade" placeholder="Quantidade">
+                        </li>
+                    </fieldset>
 
-                <!-- Shipping information  -->
-                <legend>Shipping information</legend>
-                <li>
-                    <label>Endereco</label>
-                    <input type="text" name="endereco" placeholder="endereco">
-                </li>
-                <li>
-                    <label>Complemento</label>
-                    <input type="text" name="complemento" placeholder="Complemento">
-                </li>
-                <li>
-                    <label>Bairro</label>
-                    <input type="text" name="bairro" placeholder="bairro">
-                </li>
-                <li>
-                    <label>Cidade</label>
-                    <input type="text" name="cidade" placeholder="cidade">
-                </li>
-                <li>
-                    <label>Estado</label>
-                    <input type="text" name="estado" placeholder="estado">
-                </li>
-                <li>
-                    <label>CEP</label>
-                    <input type="text" name="cep" placeholder="CEP">
-                </li>
+                    <!-- Método de Pagamento -->
+                    <legend>Método de Pagamento</legend>
+                    <fieldset>
+                        <li>
+                            <input type="radio" id="credito" name="payment" value="Credito">
+                            <label for="credito">Credito</label><br>
+                        </li>
+                        <li>
+                            <input type="radio" id="boleto" name="payment" value="Boleto">
+                            <label for="boleto">Ticket</label><br>
+                        </li>
+                        <li>
+                            <input type="radio" id="paypal" name="payment" value="PayPal">
+                            <label for="paypal">PayPal</label>
+                        </li>
+                    </fieldset>
+                </ul>
+            </div>
 
-                <!-- Order detais -->
-                <legend>Order detais</legend>
-                <li>
-                    <label>Id Produto</label>
-                    <input type="text" name="id_produto" placeholder="Id Produto">
-                </li>
-                <li>
-                    <label>Quantidade</label>
-                    <input type="text" name="quantidade" placeholder="Quantidade">
-                </li>
-
-
-                <!-- Método de Pagamento -->
-                <legend>Método de Pagamento</legend>
-                <li>
-                    <input type="radio" id="credito" name="payment" value="Credito">
-                    <label for="credito">Credito</label><br>
-                </li>
-                <li>
-                    <input type="radio" id="boleto" name="payment" value="Boleto">
-                    <label for="boleto">Ticket</label><br>
-                </li>
-                <li>
-                    <input type="radio" id="paypal" name="payment" value="PayPal">
-                    <label for="paypal">PayPal</label>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Botoes de Acao -->
-        <div>
-            <button>Enviar Pedido</button>
-            <button>Limpar Formulário</button>
+            <!-- Botoes de Acao -->
+            <div>
+                <button>Enviar Pedido</button>
+                <button>Limpar Formulário</button>
+            </div>
         </div>
     </form>
+    <footer>
+        <div class="footer">
+            <ul>
+                <li>R. Niterói, 400 - Centro, São Caetano do Sul - SP, 09510-200</li>
+                <li>(11) 4239-9200</li>
+                <li>jitterbit@jitterbit.com</li>
+            </ul>
+        </div>
+        <div class="footer">
+            <a target="_blank" href="https://twitter.com/jitterbit">
+                <img class="logo-img"
+                    src="https://www.jitterbit.com/wp-content/themes/jitterbit/dist/images/icon-twitter.svg?id=f3a4a91b7fdc80e2c0be"
+                    alt="Twitter">
+                <span class="logo-span">Twitter</span>
+            </a>
 
+            <a target="_blank" href="https://www.instagram.com/jitterbitintegration/">
+                <img class="logo-img"
+                    src="https://www.jitterbit.com/wp-content/themes/jitterbit/dist/images/instagram.svg?id=d541af97c28af957f78f"
+                    alt="Instagram">
+                <span class="logo-span">Instagram</span>
+            </a>
+            <a target="_blank" href="https://www.facebook.com/jitterbit">
+                <img class="logo-img"
+                    src="https://www.jitterbit.com/wp-content/themes/jitterbit/dist/images/icon-facebook.svg?id=67d1b6abbdf6036d072a"
+                    alt="Facebook">
+                <span class="logo-span">Facebook</span>
+            </a>
+        </div>
+    </footer>
 
 </body>
 
