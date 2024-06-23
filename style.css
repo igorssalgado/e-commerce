@@ -24,6 +24,14 @@ li {
 	height: 1rem;
 }
 
+select {
+	width: 100%;
+	margin: .01rem;
+	box-sizing: border-box;
+	height: 1.75rem;
+
+}
+
 /* change input background color when it is focused */
 input:focus {
 	background-color: rgba(193, 231, 243, 0.589);
