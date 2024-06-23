@@ -2,166 +2,204 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="style.css" />
     <img class="logo" src="./Jitterbit-logo-color-horizontal.png" alt="jitterbit-logo" sizes="100px">
 </head>
 
 <body>
-    <form action="/subscribe" method="post">
-        <div>
+    <div id="page-container">
+        <form action="/subscribe" method="post">
             <div>
                 <ul>
-                    <!-- Informações do Cliente -->
-                    <legend>Informações do Cliente</legend>
-                    <fieldset>
-                        <li>
-                            <label>Nome Completo</label>
-                            <input type="text" name="nome_completo" placeholder="nome completo" required>
-                        </li>
-                        <li>
-                            <label>Email</label>
-                            <input type="email" name="email" placeholder="email@email.com" required>
-                        </li>
-                        <li>
-                            <label>Telefone</label>
-                            <input type="tel" name="telefone" placeholder="123456789" required>
-                        </li>
-                    </fieldset>
-                    <!-- Endereço de Entrega  -->
-                    <legend>Endereço de Entrega</legend>
-                    <fieldset>
-                        <li>
-                            <label>Endereco</label>
-                            <input type="text" name="endereco" placeholder="endereco" required>
-                        </li>
-                        <li>
-                            <label>Complemento</label>
-                            <input type="text" name="complemento" placeholder="complemento">
-                        </li>
-                        <li>
-                            <label>Bairro</label>
-                            <input type="text" name="bairro" placeholder="bairro" required>
-                        </li>
-                        <li>
-                            <label>Cidade</label>
-                            <input type="text" name="cidade" placeholder="cidade" required>
-                        </li>
-                        <li>
-                            <label>Estado</label>
-                            <select name="estado" id="estado" required>
-                                <option value="" selected disabled hidden>Escolha</option>
-                                <option value="AC">Acre</option>
-                                <option value="AL">Alagoas</option>
-                                <option value="AP">Amapá</option>
-                                <option value="AM">Amazonas</option>
-                                <option value="BA">Bahia</option>
-                                <option value="CE">Ceará</option>
-                                <option value="DF">Distrito Federal</option>
-                                <option value="ES">Espírito Santo</option>
-                                <option value="GO">Goiás</option>
-                                <option value="MA">Maranhão</option>
-                                <option value="MT">Mato Grosso</option>
-                                <option value="MS">Mato Grosso do Sul</option>
-                                <option value="MG">Minas Gerais</option>
-                                <option value="PA">Pará</option>
-                                <option value="PB">Paraíba</option>
-                                <option value="PR">Paraná</option>
-                                <option value="PE">Pernambuco</option>
-                                <option value="PI">Piauí</option>
-                                <option value="RJ">Rio de Janeiro</option>
-                                <option value="RN">Rio Grande do Norte</option>
-                                <option value="RS">Rio Grande do Sul</option>
-                                <option value="RO">Rondônia</option>
-                                <option value="RR">Roraima</option>
-                                <option value="SC">Santa Catarina</option>
-                                <option value="SP">São Paulo</option>
-                                <option value="SE">Sergipe</option>
-                                <option value="TO">Tocantins</option>
-                            </select>
-                        </li>
-                        <li>
-                            <label>CEP</label>
-                            <input type="text" name="cep" placeholder="CEP" required>
-                        </li>
-                    </fieldset>
-                    <!-- Informações do Pedido -->
-                    <legend>Informações do Pedido</legend>
-                    <fieldset>
-                        <li>
-                            <label>Id Produto</label>
-                            <select name="id_produto" id="id_produto" required>
-                                <option value="" selected disabled hidden>Escolha</option>
-                                <option value="AC">v10089015vdb-01</option>
-                                <option value="AL">v10089016vdb-01</option>
-                                <option value="AP">v10089017vdb-01</option>
-                                <option value="AM">v10089018vdb-01</option>
-                                <option value="AP">v10089019vdb-01</option>
-                            </select>
-                        </li>
-                        <li>
-                            <label>Quantidade</label>
-                            <input type="number" name="quantidade" placeholder="Quantidade" required>
-                        </li>
-                    </fieldset>
+                    <div class="flex-container">
+                        <div class="flex-item-left">
+                            <!-- Informações do Cliente -->
+                            <legend>Informações do Cliente</legend>
+                            <fieldset>
+                                <div class="flex-container">
 
-                    <!-- Método de Pagamento -->
-                    <legend>Método de Pagamento</legend>
-                    <fieldset>
-                        <li>
-                            <input type="radio" id="credito" name="payment" value="Credito" checked>
-                            <label for="credito">Credito</label><br>
-                        </li>
-                        <li>
-                            <input type="radio" id="boleto" name="payment" value="Boleto">
-                            <label for="boleto">Ticket</label><br>
-                        </li>
-                        <li>
-                            <input type="radio" id="paypal" name="payment" value="PayPal">
-                            <label for="paypal">PayPal</label>
-                        </li>
-                    </fieldset>
+                                    <div class="flex-item-left">
+                                        <li>
+                                            <label for="nome_completo">Nome Completo</label>
+                                            <input class="form-input" type="text" name="nome_completo"
+                                                placeholder="nome completo" required>
+                                        </li>
+                                    </div>
+                                    <div class="flex-item-right">
+                                        <li>
+                                            <label>Email</label>
+                                            <input class="form-input" type="email" name="email"
+                                                placeholder="email@email.com" required>
+                                        </li>
+                                        <li>
+                                            <label>Telefone</label>
+                                            <input class="form-input" type="tel" name="telefone" placeholder="123456789"
+                                                required>
+                                        </li>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="flex-item-right">
+                            <!-- Endereço de Entrega  -->
+                            <legend>Endereço de Entrega</legend>
+                            <fieldset>
+                                <div class="flex-container">
+                                    <div class="flex-item-left">
+                                        <li>
+                                            <label>Endereco</label>
+                                            <input class="form-input" type="text" name="endereco" placeholder="endereco"
+                                                required>
+                                        </li>
+                                        <li>
+                                            <label>Complemento</label>
+                                            <input class="form-input" type="text" name="complemento"
+                                                placeholder="complemento">
+                                        </li>
+                                        <li>
+                                            <label>Bairro</label>
+                                            <input class="form-input" type="text" name="bairro" placeholder="bairro"
+                                                required>
+                                        </li>
+                                    </div>
+                                    <div class="flex-item-right">
+                                        <li>
+                                            <label>Cidade</label>
+                                            <input class="form-input" type="text" name="cidade" placeholder="cidade"
+                                                required>
+                                        </li>
+                                        <li>
+                                            <label>Estado</label>
+                                            <select class="form-input" name="estado" id="estado" required>
+                                                <option value="" selected disabled>Escolha</option>
+                                                <option value="AC">Acre</option>
+                                                <option value="AL">Alagoas</option>
+                                                <option value="AP">Amapá</option>
+                                                <option value="AM">Amazonas</option>
+                                                <option value="BA">Bahia</option>
+                                                <option value="CE">Ceará</option>
+                                                <option value="DF">Distrito Federal</option>
+                                                <option value="ES">Espírito Santo</option>
+                                                <option value="GO">Goiás</option>
+                                                <option value="MA">Maranhão</option>
+                                                <option value="MT">Mato Grosso</option>
+                                                <option value="MS">Mato Grosso do Sul</option>
+                                                <option value="MG">Minas Gerais</option>
+                                                <option value="PA">Pará</option>
+                                                <option value="PB">Paraíba</option>
+                                                <option value="PR">Paraná</option>
+                                                <option value="PE">Pernambuco</option>
+                                                <option value="PI">Piauí</option>
+                                                <option value="RJ">Rio de Janeiro</option>
+                                                <option value="RN">Rio Grande do Norte</option>
+                                                <option value="RS">Rio Grande do Sul</option>
+                                                <option value="RO">Rondônia</option>
+                                                <option value="RR">Roraima</option>
+                                                <option value="SC">Santa Catarina</option>
+                                                <option value="SP">São Paulo</option>
+                                                <option value="SE">Sergipe</option>
+                                                <option value="TO">Tocantins</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <label>CEP</label>
+                                            <input class="form-input" type="text" name="cep" placeholder="CEP" required>
+                                        </li>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+            </div>
+            <div>
+                <div class="flex-container">
+                    <div class="flex-item-left">
+                        <!-- Informações do Pedido -->
+                        <legend>Informações do Pedido</legend>
+                        <fieldset>
+                            <div class="flex-container">
+                                <div class="flex-item-left">
+                                    <li>
+                                        <label>Id Produto</label>
+                                        <select class="form-input" name="id_produto" id="id_produto" required>
+                                            <option value="" selected disabled hidden>Escolha</option>
+                                            <option value="AC">v10089015vdb-01</option>
+                                            <option value="AL">v10089016vdb-01</option>
+                                            <option value="AP">v10089017vdb-01</option>
+                                            <option value="AM">v10089018vdb-01</option>
+                                            <option value="AP">v10089019vdb-01</option>
+                                        </select>
+                                    </li>
+
+                                    <li>
+                                        <label>Quantidade</label>
+                                        <input class="form-input" type="number" name="quantidade"
+                                            placeholder="Quantidade" required>
+                                    </li>
+                                </div>
+
+                        </fieldset>
+                    </div>
+                    <div class="flex-item-right">
+                        <!-- Método de Pagamento -->
+                        <legend>Método de Pagamento</legend>
+                        <fieldset>
+                            <li>
+                                <input type="radio" id="credito" name="payment" value="Credito" checked>
+                                <label for="credito">Credito</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="boleto" name="payment" value="Boleto">
+                                <label for="boleto">Ticket</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="paypal" name="payment" value="PayPal">
+                                <label for="paypal">PayPal</label>
+                            </li>
+                        </fieldset>
+                        </ul>
+
+                    </div>
+                </div>
+                <!-- Botoes de Acao -->
+                <div class="action-button">
+                    <button type="submit">Enviar Pedido</button>
+                    <button type="reset">Limpar Formulário</button>
+                </div>
+            </div>
+        </form>
+        <footer>
+            <div class="footer">
+                <ul>
+                    <li>R. Niterói, 400 - Centro, São Caetano do Sul - SP, 09510-200</li>
+                    <li>(11) 4239-9200</li>
+                    <li>jitterbit@jitterbit.com</li>
                 </ul>
             </div>
+            <div class="footer">
+                <a target="_blank" href="https://twitter.com/jitterbit">
+                    <img class="logo-img"
+                        src="https://www.jitterbit.com/wp-content/themes/jitterbit/dist/images/icon-twitter.svg?id=f3a4a91b7fdc80e2c0be"
+                        alt="Twitter">
+                    <span class="logo-span">Twitter</span>
+                </a>
 
-            <!-- Botoes de Acao -->
-            <div>
-                <button>Enviar Pedido</button>
-                <button>Limpar Formulário</button>
+                <a target="_blank" href="https://www.instagram.com/jitterbitintegration/">
+                    <img class="logo-img"
+                        src="https://www.jitterbit.com/wp-content/themes/jitterbit/dist/images/instagram.svg?id=d541af97c28af957f78f"
+                        alt="Instagram">
+                    <span class="logo-span">Instagram</span>
+                </a>
+                <a target="_blank" href="https://www.facebook.com/jitterbit">
+                    <img class="logo-img"
+                        src="https://www.jitterbit.com/wp-content/themes/jitterbit/dist/images/icon-facebook.svg?id=67d1b6abbdf6036d072a"
+                        alt="Facebook">
+                    <span class="logo-span">Facebook</span>
+                </a>
             </div>
-        </div>
-    </form>
-    <footer>
-        <div class="footer">
-            <ul>
-                <li>R. Niterói, 400 - Centro, São Caetano do Sul - SP, 09510-200</li>
-                <li>(11) 4239-9200</li>
-                <li>jitterbit@jitterbit.com</li>
-            </ul>
-        </div>
-        <div class="footer">
-            <a target="_blank" href="https://twitter.com/jitterbit">
-                <img class="logo-img"
-                    src="https://www.jitterbit.com/wp-content/themes/jitterbit/dist/images/icon-twitter.svg?id=f3a4a91b7fdc80e2c0be"
-                    alt="Twitter">
-                <span class="logo-span">Twitter</span>
-            </a>
-
-            <a target="_blank" href="https://www.instagram.com/jitterbitintegration/">
-                <img class="logo-img"
-                    src="https://www.jitterbit.com/wp-content/themes/jitterbit/dist/images/instagram.svg?id=d541af97c28af957f78f"
-                    alt="Instagram">
-                <span class="logo-span">Instagram</span>
-            </a>
-            <a target="_blank" href="https://www.facebook.com/jitterbit">
-                <img class="logo-img"
-                    src="https://www.jitterbit.com/wp-content/themes/jitterbit/dist/images/icon-facebook.svg?id=67d1b6abbdf6036d072a"
-                    alt="Facebook">
-                <span class="logo-span">Facebook</span>
-            </a>
-        </div>
-    </footer>
-
+        </footer>
+    </div>
 </body>
 
 </html>
