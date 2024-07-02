@@ -1,3 +1,6 @@
+## E-Commerce HTML form
+
+Fake e-commerce form, created using HTML and CSS only.
 
 ## Authors
 
