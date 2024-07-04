@@ -9,111 +9,103 @@
 
 <body>
     <form action="/subscribe" method="post">
-        <div>
-            <ul>
-                <div class="flex-container">
-                    <div class="flex-item-left">
-                        <!-- Informações do Cliente -->
-                        <legend>Informações do Cliente</legend>
-                        <fieldset>
-                            <div class="flex-container">
-
-                                <div class="flex-item-left">
-                                    <li>
-                                        <label for="nome_completo">Nome Completo</label>
-                                        <input class="form-input" type="text" name="nome_completo"
-                                            placeholder="Nome Completo" required>
-                                    </li>
-                                </div>
-                                <div class="flex-item-right">
-                                    <li>
-                                        <label>Email</label>
-                                        <input class="form-input" type="email" name="email"
-                                            placeholder="email@email.com" required>
-                                    </li>
-                                    <li>
-                                        <label>Telefone</label>
-                                        <input class="form-input" type="tel" id="telefone" name="telefone"
-                                            minlength="11" pattern="\([0-9]{2}\)[\s][0-9]{5}-[0-9]{4}"
-                                            placeholder="(xx) 9xxxx-xxxx" required>
-                                    </li>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <div class="flex-item-right">
-                        <!-- Endereço de Entrega  -->
-                        <legend>Endereço de Entrega</legend>
-                        <fieldset>
-                            <div class="flex-container">
-                                <div class="flex-item-left">
-                                    <li>
-                                        <label>Endereco</label>
-                                        <input class="form-input" type="text" name="endereco" placeholder="Endereco"
-                                            required>
-                                    </li>
-                                    <li>
-                                        <label>Complemento</label>
-                                        <input class="form-input" type="text" name="complemento"
-                                            placeholder="Complemento">
-                                    </li>
-                                    <li>
-                                        <label>Bairro</label>
-                                        <input class="form-input" type="text" name="bairro" placeholder="Bairro"
-                                            required>
-                                    </li>
-                                </div>
-                                <div class="flex-item-right">
-                                    <li>
-                                        <label>Cidade</label>
-                                        <input class="form-input" type="text" name="cidade" placeholder="Cidade"
-                                            required>
-                                    </li>
-                                    <li>
-                                        <label>Estado</label>
-                                        <select name="estado" id="estado" required>
-                                            <option value="" selected disabled>Escolha</option>
-                                            <option value="AC">Acre</option>
-                                            <option value="AL">Alagoas</option>
-                                            <option value="AP">Amapá</option>
-                                            <option value="AM">Amazonas</option>
-                                            <option value="BA">Bahia</option>
-                                            <option value="CE">Ceará</option>
-                                            <option value="DF">Distrito Federal</option>
-                                            <option value="ES">Espírito Santo</option>
-                                            <option value="GO">Goiás</option>
-                                            <option value="MA">Maranhão</option>
-                                            <option value="MT">Mato Grosso</option>
-                                            <option value="MS">Mato Grosso do Sul</option>
-                                            <option value="MG">Minas Gerais</option>
-                                            <option value="PA">Pará</option>
-                                            <option value="PB">Paraíba</option>
-                                            <option value="PR">Paraná</option>
-                                            <option value="PE">Pernambuco</option>
-                                            <option value="PI">Piauí</option>
-                                            <option value="RJ">Rio de Janeiro</option>
-                                            <option value="RN">Rio Grande do Norte</option>
-                                            <option value="RS">Rio Grande do Sul</option>
-                                            <option value="RO">Rondônia</option>
-                                            <option value="RR">Roraima</option>
-                                            <option value="SC">Santa Catarina</option>
-                                            <option value="SP">São Paulo</option>
-                                            <option value="SE">Sergipe</option>
-                                            <option value="TO">Tocantins</option>
-                                        </select>
-                                    </li>
-                                    <li>
-                                        <label>CEP</label>
-                                        <input class="form-input" type="text" name="cep" placeholder="CEP" required>
-                                    </li>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </div>
-                </div>
-        </div>
-        <div>
         <ul>
+            <div class="flex-container">
+                <div class="flex-item-left">
+                    <!-- Informações do Cliente -->
+                    <legend>Informações do Cliente</legend>
+                    <fieldset>
+                        <div class="flex-container">
+                            <div class="flex-item-left">
+                                <li>
+                                    <label for="nome_completo">Nome Completo</label>
+                                    <input class="form-input" type="text" name="nome_completo"
+                                        placeholder="Nome Completo" required>
+                                </li>
+                            </div>
+                            <div class="flex-item-right">
+                                <li>
+                                    <label>Email</label>
+                                    <input class="form-input" type="email" name="email" placeholder="email@email.com"
+                                        required>
+                                </li>
+                                <li>
+                                    <label>Telefone</label>
+                                    <input class="form-input" type="tel" id="telefone" name="telefone" minlength="11"
+                                        pattern="\([0-9]{2}\)[\s][0-9]{5}-[0-9]{4}" placeholder="(xx) 9xxxx-xxxx"
+                                        required>
+                                </li>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="flex-item-right">
+                    <!-- Endereço de Entrega  -->
+                    <legend>Endereço de Entrega</legend>
+                    <fieldset>
+                        <div class="flex-container">
+                            <div class="flex-item-left">
+                                <li>
+                                    <label>Endereco</label>
+                                    <input class="form-input" type="text" name="endereco" placeholder="Endereco"
+                                        required>
+                                </li>
+                                <li>
+                                    <label>Complemento</label>
+                                    <input class="form-input" type="text" name="complemento" placeholder="Complemento">
+                                </li>
+                                <li>
+                                    <label>Bairro</label>
+                                    <input class="form-input" type="text" name="bairro" placeholder="Bairro" required>
+                                </li>
+                            </div>
+                            <div class="flex-item-right">
+                                <li>
+                                    <label>Cidade</label>
+                                    <input class="form-input" type="text" name="cidade" placeholder="Cidade" required>
+                                </li>
+                                <li>
+                                    <label>Estado</label>
+                                    <select name="estado" id="estado" required>
+                                        <option value="" selected disabled>Escolha</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label>CEP</label>
+                                    <input class="form-input" type="text" name="cep" placeholder="CEP" required>
+                                </li>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
             <div class="flex-container">
                 <div class="flex-item-left">
                     <!-- Informações do Pedido -->
@@ -159,16 +151,15 @@
                             <label for="paypal">PayPal</label>
                         </li>
                     </fieldset>
-                </ul>
-                
-            </div> 
-            </div>
-            <!-- Botoes de Acao -->
-            <div class="action-buttons">
-                <button class="submit-btn" type="submit">Enviar Pedido</button>
-                <button class="clear-btn" type="reset">Limpar Formulário</button>
+                </div>
             </div>
         </ul>
+        <!-- Botoes de Acao -->
+        <div class="action-buttons">
+            <button class="submit-btn" type="submit">Enviar Pedido</button>
+            <button class="clear-btn" type="reset">Limpar Formulário</button>
+        </div>
+
         </div>
     </form>
     <footer>
